@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Head -->
+
+<head>
+
+    <title>Login</title>
+
+    <!-- Meta-Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static '/css/style_login.css' %}" type="text/css" media="all">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}" type="text/css" media="all">
+
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Mukta:300,400,500" rel="stylesheet">
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+
+<body>
+
+    <section class="main">
+        <div class="bottom-grid">
+            <div class="logo">
+                <h1> <a href=""> Login to your account !!!!</a></h1>
+            </div>
+        </div>
+        <!-- register -->
+        <div class="w3lhny-register">
+            <div class="iconhny">
+               <span class="fa fa-user-plus"></span>
+             </div>
+            <form action="/api/login" method="post" class="register-form">
+                <fieldset>
+                    <div class="form">
+                        <div class="form-row">
+                            <span class="fa fa-user"></span>
+                            <input type="text" id="name" class="form-text" placeholder="Name" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <span class="fa fa-envelope"></span>
+                            <input type="text" id="username" class="form-text" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="form-row">
+                            <span class="fa fa-lock"></span>
+                            <input type="password" id="password" class="form-text" placeholder="Password" name="password" required>
+                        </div>
+                        <div class="form-row button-login">
+                            <input type="submit" value="Login">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            
+
+                <div class="social-media">
+                    <a href="" class="fb"><span class="fa fa-facebook"></span></a>
+                    <a href="" class="tw"><span class="fa fa-twitter"></span></a>
+                    <a href="" class="pi"><span class="fa fa-pinterest"></span></a>
+                </div>
+            
+        </div>
+        
+    </section>
+
+</body>
+<!-- //Body -->
+
+</html>

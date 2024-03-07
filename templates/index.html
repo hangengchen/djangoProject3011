@@ -1,0 +1,600 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Khobor - Modern Magazine & Newspaper HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/img/favicon.ico' %}">
+    
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static '/css/plugins.css' %}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <!-- Modernizer JS -->
+    <script src="{% static '/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+</head>
+
+<body>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    
+    <!-- Header Top Start -->
+    <div class="header-top header-top-2 section">
+        <div class="container">
+            <div class="row">
+               
+                <!-- Header Top Links Start -->
+                <div class="header-top-links col-md-9 col-6">
+                    
+                    <!-- Header Links -->
+                    <ul class="header-links header-links-2">
+                        <li class="d-none d-md-block"><a href=""><i class="fa fa-mixcloud"></i> <span class="weather-degrees">20 <span class="unit">c</span> </span> <span class="weather-location">England</span></a></li>
+                        <li><a href=""><i class="fa fa-headphones"></i>Contact</a></li>
+                        {% if username %}
+                            <li><a href="/post/">Post a blog</a></li>
+                            <li class="disabled block d-none d-md-block"><a href="#"><i class="fa fa-clock-o"></i> 欢迎, {{ username }}!</a></li>
+                            <form action="/api/logout" method="post" class="d-none d-md-block">
+                                <button type="submit" class="btn btn-link">
+                                    <li><i class="fa fa-sign-out"></i> Logout</li>
+                                </button>
+                            </form>
+                        {% else %}
+                                <li><a href="/login/">Login</a></li>
+                        {% endif %}
+                        
+                        
+                    </ul>
+                    
+                </div><!-- Header Top Links End -->
+                
+                <!-- Header Top Social Start -->
+                <div class="header-top-social col-md-3 col-6">
+                    
+                    <!-- Header Social -->
+                    <div class="header-social header-social-2">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
+                    </div>
+                    
+                </div><!-- Header Top Social End -->
+                
+            </div>
+        </div>
+    </div><!-- Header Top End -->
+    
+    <!-- Header Start -->
+    <div class="header-section section">
+        <div class="container">
+            <div class="row align-items-center">
+               
+                <!-- Header Logo -->
+                <div class="header-logo col-md-4 d-none d-md-block">
+                    <a href="/" class="logo"><img src="{% static '/img/logo.png' %}" alt="Logo"></a>
+                </div>
+                
+                <!-- Header Banner -->
+                <div class="header-banner col-md-8 col-12">
+                    <div class="banner"><a href=""><img src="{% static '/img/banner/header-banner-2.jpg' %}" alt="Header Banner"></a></div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- Header End -->
+    
+    <!-- Menu Section Start -->
+    <div class="menu-section section bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="menu-section-wrap">
+
+                        <!-- Main Menu Start -->
+                        <div class="main-menu float-left d-none d-md-block">
+                            <nav>
+                                <ul>
+                                    <li><a href="">All</a></li>
+                                    <li><a href="">Politic</a></li>
+                                    <li><a href="">Art</a></li>
+                                    <li><a href="">Technology</a></li>
+                                    <li><a href="">Trivia</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu Start -->
+
+                        <div class="mobile-logo d-none d-block d-md-none"><a href=""></a></div>
+
+                        <!-- Header Search -->
+                        <div class="header-search float-right">
+
+                            <!-- Search Toggle -->
+                            <button class="header-search-toggle"><i class="fa fa-search"></i></button>
+
+                            <!-- Header Search Form -->
+                            <div class="header-search-form">
+                                <form action="">
+                                    <label>
+                                        <input type="text" placeholder="Search Here">
+                                    </label>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Menu Section End -->
+    
+    <!-- Breaking News Section Start -->
+    <div class="breaking-news-section section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                   
+                    <!-- Breaking News Wrapper Start -->
+                    <div class="breaking-news-wrapper">
+
+                        <!-- Breaking News Title -->
+                        <h5 class="breaking-news-title float-left">Breaking News</h5>
+
+                        <!-- Breaking Newsticker Start -->
+                        <ul class="breaking-news-ticker float-left">
+                            <li><a href="#">Tell me what you today, And i ‘ll tell you who you are!!!</a></li>
+                            <li><a href="#">Fashion is about some thing that comes from with in you.</a></li>
+                            <li><a href="#">Australia announced squad for Bangladesh tour.</a></li>
+                            <li><a href="#">How group of rebel are talking on Banasree epidemic.</a></li>
+                        </ul><!-- Breaking Newsticker Start -->
+
+                        <!-- Breaking News Nav -->
+                        <div class="breaking-news-nav">
+                            <button class="news-ticker-prev"><i class="fa fa-angle-left"></i></button>
+                            <button class="news-ticker-next"><i class="fa fa-angle-right"></i></button>
+                        </div>
+                        
+                    </div><!-- Breaking News Wrapper End -->
+                    
+                </div>
+            </div>
+        </div>
+    </div><!-- Breaking News Section End -->
+
+    <!-- Blog Section Start -->
+    <div class="blog-section section">
+        <div class="container">
+            
+            <!-- Feature Post Row Start -->
+            <div class="row">
+                
+                <div class="col-lg-8 col-12 mb-50">                 
+                    {% for story in stories %}
+                        <!-- Single Blog Start -->
+                        <div class="single-blog mb-50">
+                            <div class="blog-wrap">
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <a href="#" class="meta-item category">{{ story.category }}</a>
+                                    <a href="#" class="meta-item author">{{ story.author.name }}</a>
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>{{ story.date|date:"d F Y" }}</span>
+                                </div>
+                                <!-- Title -->
+                                <h3 class="title"><a>{{ story.headline }}</a></h3>
+                                
+                                <!-- Content -->
+                                <div class="content">
+                                    <!-- Description -->
+                                    <p>{{ story.details|truncatewords:50|linebreaksbr }}</p> <!-- Adjust the truncatewords value as needed -->
+                                    <!-- Read More -->
+                                    <br>
+                                    <a href="{% url 'story-detail' story.id %}" class="read-more">continue reading</a>
+                                </div>
+                            </div>
+                        </div><!-- Single Blog End -->
+                    {% empty %}
+                        <p>No stories available.</p>
+                    {% endfor %}
+                
+                    <div class="page-pagination-2 text-center">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <!-- Sidebar Start -->
+                <div class="col-lg-4 col-12 mb-50">
+                    <div class="row">
+                       
+                        <!-- Single Sidebar -->
+                        <div class="single-sidebar col-lg-12 col-md-6 col-12">
+
+                            <!-- Sidebar Block Wrapper -->
+                            <div class="sidebar-block-wrapper">
+
+                                <!-- Sidebar Block Head Start -->
+                                <div class="head feature-head">
+
+                                    <!-- Title -->
+                                    <h4 class="title">Follow Us</h4>
+
+                                </div><!-- Sidebar Block Head End -->
+
+                                <!-- Sidebar Block Body Start -->
+                                <div class="body">
+
+                                    <div class="sidebar-social-follow">
+                                        <div>
+                                            <a href="#" class="facebook">
+                                                <i class="fa fa-facebook"></i>
+                                                <h3>40,583</h3>
+                                                <span>Fans</span>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="google-plus">
+                                                <i class="fa fa-google-plus"></i>
+                                                <h3>36,857</h3>
+                                                <span>Followers</span>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                                <h3>50,883</h3>
+                                                <span>Followers</span>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="dribbble">
+                                                <i class="fa fa-dribbble"></i>
+                                                <h3>4,743</h3>
+                                                <span>Followers</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div><!-- Sidebar Block Body End -->
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div><!-- Sidebar End -->
+                
+            </div><!-- Feature Post Row End -->
+            
+        </div>
+    </div><!-- Blog Section End -->
+    
+    <!-- Instagram Section Start -->
+    <div class="instagram-section section">
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!-- Full Width Instagram Carousel Start -->
+                <div class="fullwidth-instagram-carousel instagram-carousel col pl-0 pr-0">
+                    
+                    <a href="" class="instagram-item"><img src="{% static '/img/instagram/1.jpg' %}" alt="instagram"></a>
+                    <a href="" class="instagram-item"><img src="{% static '/img/instagram/2.jpg' %}" alt="instagram"></a>
+                    <a href="" class="instagram-item"><img src="{% static '/img/instagram/3.jpg' %}" alt="instagram"></a>
+                    <a href="" class="instagram-item"><img src="{% static '/img/instagram/4.jpg' %}" alt="instagram"></a>
+                    <a href="" class="instagram-item"><img src="{% static '/img/instagram/5.jpg' %}" alt="instagram"></a>
+                    <a href="" class="instagram-item"><img src="{% static '/img/instagram/6.jpg' %}" alt="instagram"></a>
+                    
+                </div><!-- Full Width Instagram Carousel End -->
+                
+            </div>
+        </div>
+    </div><!-- Instagram Section End -->
+    
+    <!-- Footer Top Section Start -->
+    <div class="footer-top-section section bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!-- Footer Widget Start -->
+                <div class="footer-widget col-xl-3 col-md-6 col-12 mb-60">
+                    
+                    <!-- Title -->
+                    <h4 class="widget-title">About Us</h4>
+                    
+                    <div class="content fix">
+                        <p>Lorem ipsum dolor sit amet, consectet adipiscing Se velit ex, dictum at nunc  placerat consequatS quam. ornaremi condiment PhasellusI  cursii placerat quam et, mattis nibh Suspendislacinias.</p>
+                        
+                        <!-- Footer Contact -->
+                        <ol class="footer-contact">
+                            <li><i class="fa fa-home"></i>House No 08, Din Bari, Dhaka, Bangladesh</li>
+                            <li><i class="fa fa-envelope-open"></i>Username@gmail.com</li>
+                            <li><i class="fa fa-headphones"></i>(+660 256 24857) , (+660 256 24857)</li>
+                        </ol>
+                        
+                        <!-- Footer Social -->
+                        <div class="footer-social">
+                            <a href="" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="" class="dribbble"><i class="fa fa-dribbble"></i></a>
+                            <a href="" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        
+                    </div>
+                    
+                </div><!-- Footer Widget End -->
+                
+                <!-- Footer Widget Start -->
+                <div class="footer-widget col-xl-3 col-md-6 col-12 mb-60">
+                    
+                    <!-- Title -->
+                    <h4 class="widget-title">popular News</h4>
+                    
+                    <!-- Footer Widget Post Start -->
+                    <div class="footer-widget-post">
+                        <div class="post-wrap">
+                            
+                            <!-- Image -->
+                            <a href="" class="image"><img src="{% static '/img/post/post-33.jpg' %}" alt="Post"></a>
+                            
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Title -->
+                                <h5 class="title"><a href="">Hynpodia helps male travelers find healths.</a></h5>
+
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div><!-- Footer Widget Post ENd -->
+                    
+                    <!-- Footer Widget Post Start -->
+                    <div class="footer-widget-post">
+                        <div class="post-wrap">
+                            
+                            <!-- Image -->
+                            <a href="" class="image"><img src="{% static '/img/post/post-34.jpg' %}" alt="Post"></a>
+                            
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Title -->
+                                <h5 class="title"><a href="">How do you solve the IOS page problem.</a></h5>
+
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div><!-- Footer Widget Post End -->
+                    
+                    <!-- Footer Widget Post Start -->
+                    <div class="footer-widget-post">
+                        <div class="post-wrap">
+                            
+                            <!-- Image -->
+                            <a href="" class="image"><img src="{% static '/img/post/post-35.jpg' %}" alt="Post"></a>
+                            
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Title -->
+                                <h5 class="title"><a href="">Home is not a place . . . . . .  . it’s a feeling.</a></h5>
+
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div><!-- Footer Widget Post End -->
+                    
+                </div><!-- Footer Widget End -->
+                
+                <!-- Footer Widget Start -->
+                <div class="footer-widget col-xl-3 col-md-6 col-12 mb-60">
+                    
+                    <h4 class="widget-title">Twitter Feed</h4>
+                    
+                    <!-- Single Tweet Start -->
+                    <div class="single-tweet">
+                       
+                        <!-- Image -->
+                        <a href="#" class="image"><img src="{% static '/img/tweets/1.png' %}" alt="Author Image"></a>
+                        <!-- Content -->
+                        <div class="content fix">
+                            <!-- Head -->
+                            <div class="head"><h5><a href="">Hashtech</a></h5><span>5 Minute Ago</span></div>
+                            <!-- Tags -->
+                            <div class="tags">
+                                <a href="#">#UI</a>
+                                <a href="#">#UX</a>
+                                <a href="#">#Lorem</a>
+                            </div>
+                            <!-- Links -->
+                            <div class="links"><a href="#">@https://themeforest.net/item/moto-multipurpose-landing-page-template/20342375?s_rank=1</a></div>
+                            <!-- Meta -->
+                            <ul class="meta">
+                                <li><a href="#"><i class="fa fa-heart"></i> 865</a></li>
+                                <li><a href="#"><i class="fa fa-comments"></i> 653</a></li>
+                                <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div><!-- Single Tweet End -->
+                    
+                    <!-- Single Tweet Start -->
+                    <div class="single-tweet">
+                       
+                        <!-- Image -->
+                        <a href="#" class="image"><img src="{% static '/img/tweets/1.png' %}" alt="Author Image"></a>
+                        <!-- Content -->
+                        <div class="content fix">
+                            <!-- Head -->
+                            <div class="head"><h5><a href="#">Hashtech</a></h5><span>5 Minute Ago</span></div>
+                            <!-- Tags -->
+                            <div class="tags">
+                                <a href="#">#UI</a>
+                                <a href="#">#UX</a>
+                                <a href="#">#Lorem</a>
+                            </div>
+                            <!-- Links -->
+                            <div class="links"><a href="#">@https://themeforest.net/item/moto-multipurpose-landing-page-template/20342375?s_rank=1</a></div>
+                            <!-- Meta -->
+                            <ul class="meta">
+                                <li><a href="#"><i class="fa fa-heart"></i> 865</a></li>
+                                <li><a href="#"><i class="fa fa-comments"></i> 653</a></li>
+                                <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div><!-- Single Tweet End -->
+                    
+                </div><!-- Footer Widget End -->
+                
+                <!-- Footer Widget Start -->
+                <div class="footer-widget col-xl-3 col-md-6 col-12 mb-60">
+                    
+                    <!-- Title -->
+                    <h4 class="widget-title">Top News</h4>
+                    
+                    <!-- Footer Widget Post Start -->
+                    <div class="footer-widget-post">
+                        <div class="post-wrap">
+                            
+                            <!-- Image -->
+                            <a href="" class="image"><img src="{% static '/img/post/post-14.jpg' %}" alt="Post"></a>
+                            
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Title -->
+                                <h5 class="title"><a href="">Australia announced squad for Bangladesh tour.</a></h5>
+
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div><!-- Footer Widget Post ENd -->
+                    
+                    <!-- Footer Widget Post Start -->
+                    <div class="footer-widget-post">
+                        <div class="post-wrap">
+                            
+                            <!-- Image -->
+                            <a href="" class="image"><img src="{% static '/img/post/post-23.jpg' %}" alt="Post"></a>
+                            
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Title -->
+                                <h5 class="title"><a href="">Fish Fry With green vegetables.</a></h5>
+
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div><!-- Footer Widget Post End -->
+                    
+                    <!-- Footer Widget Post Start -->
+                    <div class="footer-widget-post">
+                        <div class="post-wrap">
+                            
+                            <!-- Image -->
+                            <a href="" class="image"><img src="{% static '/img/post/post-40.jpg' %}" alt="Post"></a>
+                            
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Title -->
+                                <h5 class="title"><a href="">Hynpodia helps male travelers find healths.</a></h5>
+
+                                <!-- Meta -->
+                                <div class="meta fix">
+                                    <span class="meta-item date"><i class="fa fa-clock-o"></i>10 March 2017</span>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div><!-- Footer Widget Post End -->
+                    
+                </div><!-- Footer Widget End -->
+                
+            </div>
+        </div>
+    </div><!-- Footer Top Section End -->
+    
+    <!-- Footer Bottom Section Start -->
+    <div class="footer-bottom-section section bg-dark">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Copyright Start -->
+                <div class="copyright text-center col">
+                    <p>Copyright © 2024 Haaland_Han</p>
+                </div><!-- Copyright End -->
+                
+            </div>
+        </div>
+    </div><!-- Footer Bottom Section End -->
+    
+    
+</div>
+
+
+<!-- JS
+============================================ -->
+
+<!-- jQuery JS -->
+<script src="{% static '/js/vendor/jquery-1.12.0.min.js' %}"></script>
+<!-- Popper JS -->
+<script src="{% static '/js/popper.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<!-- Plugins JS -->
+<script src="{% static '/js/plugins.js' %}"></script>
+<!-- Ajax Mail JS -->
+<script src="{% static '/js/ajax-mail.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static '/js/main.js' %}"></script>
+
+</body>
+
+</html>
